@@ -19,18 +19,18 @@ RUN pecl install xdebug-2.6.0 && docker-php-ext-enable xdebug \
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
      && docker-php-ext-install pdo pdo_pgsql pgsql
 
-WORKDIR /var/www/hackathon
+WORKDIR /var/www/api
 
 # Instalando o Composer
 RUN php -r "copy('http://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
-COPY . /var/www/expo-api
+COPY . .
 COPY ./.conf/apache/api.conf /etc/apache2/sites-enabled
 RUN composer install
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 RUN a2enmod rewrite
 RUN chmod 777 storage/ -R
-VOLUME /var/www/expo-api
+VOLUME /var/www/api
 
