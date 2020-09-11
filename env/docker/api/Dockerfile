@@ -27,7 +27,6 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 COPY . .
-COPY .env .
 RUN composer run post-root-package-install
 COPY env/conf/apache/api.conf /etc/apache2/sites-enabled
 RUN composer install
@@ -36,6 +35,6 @@ RUN a2enmod rewrite
 RUN chown -R www-data:www-data .
 RUN find . -type f -exec chmod 644 {} \;
 RUN find . -type d -exec chmod 755 {} \;
-RUN chgrp -R www-data storage bootstrap/cache
-RUN chmod -R ug+rwx storage bootstrap/cache
+RUN chgrp -R www-data storage
+RUN chmod -R ug+rwx storage
 RUN chmod 777 storage/ -R
