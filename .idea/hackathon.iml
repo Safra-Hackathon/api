@@ -5,6 +5,10 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources/8dac036d-3152-480d-b6b2-c266317cd9ab/storage_v2/_src_/database/test.kkQ2AA" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/0b" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c3" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />

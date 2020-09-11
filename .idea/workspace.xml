@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="213d518b-7f16-44bc-aaae-f8397c086a07" name="Default Changelist" comment="" />
+    <list default="true" id="213d518b-7f16-44bc-aaae-f8397c086a07" name="Default Changelist" comment="init: adiciona docker-compose.yml que gerencia os containers">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dac036d-3152-480d-b6b2-c266317cd9ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8dac036d-3152-480d-b6b2-c266317cd9ab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8dac036d-3152-480d-b6b2-c266317cd9ab/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8dac036d-3152-480d-b6b2-c266317cd9ab/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" break_at_first_line="true" listening_started="true" />
   <component name="PhpServers">
@@ -132,6 +141,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/env/conf/apache" />
+      <recent name="$PROJECT_DIR$/env" />
+      <recent name="$PROJECT_DIR$/docker/api" />
+      <recent name="$PROJECT_DIR$/docker" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -147,85 +164,174 @@
       <option name="presentableId" value="Default" />
       <updated>1599790569800</updated>
       <workItem from="1599790570837" duration="4248000" />
+      <workItem from="1599795886527" duration="6658000" />
     </task>
+    <task id="LOCAL-00001" summary="init: adicionando arquivo virtual host de configuração do apache">
+      <created>1599796890025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599796890025</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init: adiciona dockerfile com configuração do servidor do back e servidor de desenvolvimento">
+      <created>1599797054950</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599797054950</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init: adiciona docker-compose.yml que gerencia os containers">
+      <created>1599797100963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599797100963</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: remove do git os arquivos de configuração do projeto do phpstorm">
+      <created>1599802328478</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599802328478</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: ajuste de permissões de pasta após build">
+      <created>1599802378943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599802378943</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: ajustes do docker-compose, identação e parâmetro depends_on para subir o banco antes">
+      <created>1599802471228</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599802471228</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init: adiciona docker-compose.yml que gerencia os containers">
+      <created>1599802498970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599802498970</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init: adicionando arquivo virtual host de configuração do apache" />
+    <MESSAGE value="init: adiciona dockerfile com configuração do servidor do back e servidor de desenvolvimento" />
+    <MESSAGE value="fix: remove do git os arquivos de configuração do projeto do phpstorm" />
+    <MESSAGE value="fix: ajuste de permissões de pasta após build" />
+    <MESSAGE value="fix: ajustes do docker-compose, identação e parâmetro depends_on para subir o banco antes" />
+    <MESSAGE value="init: adiciona docker-compose.yml que gerencia os containers" />
+    <option name="LAST_COMMIT_MESSAGE" value="init: adiciona docker-compose.yml que gerencia os containers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2009" y="185" width="623" height="701" key="#PHP" timestamp="1599791615943">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="185" width="623" height="701" key="#PHP/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599791615943" />
-    <state x="2156" y="248" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599790713963">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="562" y="225" width="589" height="478" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599801216263">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
+    <state x="562" y="225" width="589" height="478" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599801216263" />
     <state x="2156" y="248" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599790713963" />
-    <state width="1878" height="209" key="GridCell.Tab.0.bottom" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="416" y="113" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599799172951">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.0.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846828" />
+    <state x="416" y="113" width="524" height="494" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599799172951" />
+    <state x="281" y="0" width="794" height="728" key="CommitChangelistDialog2" timestamp="1599802518848">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state x="281" y="0" width="794" height="728" key="CommitChangelistDialog2/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802518848" />
+    <state x="127" y="49" width="1092" height="638" key="DiffContextDialog" timestamp="1599802411436">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state x="127" y="49" width="1092" height="638" key="DiffContextDialog/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802411436" />
+    <state width="1324" height="212" key="GridCell.Tab.0.bottom" timestamp="1599802182023">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state width="1324" height="212" key="GridCell.Tab.0.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182023" />
     <state width="1878" height="209" key="GridCell.Tab.0.bottom/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.0.center" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.0.center" timestamp="1599802182023">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.0.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846828" />
+    <state width="1324" height="212" key="GridCell.Tab.0.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182023" />
     <state width="1878" height="209" key="GridCell.Tab.0.center/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.0.left" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.0.left" timestamp="1599802182023">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.0.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846828" />
+    <state width="1324" height="212" key="GridCell.Tab.0.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182023" />
     <state width="1878" height="209" key="GridCell.Tab.0.left/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.0.right" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.0.right" timestamp="1599802182023">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.0.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846828" />
+    <state width="1324" height="212" key="GridCell.Tab.0.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182023" />
     <state width="1878" height="209" key="GridCell.Tab.0.right/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.1.bottom" timestamp="1599793973142">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.1.bottom" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.1.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.1.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.1.bottom/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973142" />
-    <state width="1878" height="209" key="GridCell.Tab.1.center" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.1.center" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.1.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.1.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.1.center/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.1.left" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.1.left" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.1.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.1.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.1.left/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.1.right" timestamp="1599793973141">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.1.right" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.1.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.1.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.1.right/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973141" />
-    <state width="1878" height="209" key="GridCell.Tab.2.bottom" timestamp="1599793973142">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.2.bottom" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.2.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.2.bottom/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.2.bottom/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973142" />
-    <state width="1878" height="209" key="GridCell.Tab.2.center" timestamp="1599793973142">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.2.center" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.2.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.2.center/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.2.center/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973142" />
-    <state width="1878" height="209" key="GridCell.Tab.2.left" timestamp="1599793973142">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.2.left" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.2.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.2.left/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.2.left/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973142" />
-    <state width="1878" height="209" key="GridCell.Tab.2.right" timestamp="1599793973142">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state width="1324" height="212" key="GridCell.Tab.2.right" timestamp="1599802182024">
+      <screen x="0" y="49" width="1366" height="768" />
     </state>
-    <state width="1324" height="209" key="GridCell.Tab.2.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599793846769" />
+    <state width="1324" height="212" key="GridCell.Tab.2.right/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802182024" />
     <state width="1878" height="209" key="GridCell.Tab.2.right/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793973142" />
+    <state width="231" height="471" key="HiddenNamespacesPopup" timestamp="1599800437983">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state width="231" height="471" key="HiddenNamespacesPopup/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599800437983" />
     <state x="1830" y="174" key="SettingsEditor" timestamp="1599793280752">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1830" y="174" key="SettingsEditor/0.49.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1599793280752" />
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1599802330468">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599802330468" />
+    <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599801706031">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state x="100" y="99" width="1166" height="528" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599801706031" />
+    <state x="293" y="0" width="770" height="728" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599799153637">
+      <screen x="0" y="49" width="1366" height="768" />
+    </state>
+    <state x="293" y="0" width="770" height="728" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.49.1366.768/1366.0.1920.1080@0.49.1366.768" timestamp="1599799153637" />
     <state x="2032" y="288" width="587" height="502" key="find.popup" timestamp="1599791825777">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -244,12 +350,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php</url>
-          <line>24</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php</url>
-          <line>25</line>
+          <line>20</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
