@@ -4,24 +4,24 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserPayback extends Model
+class UserPaybackHistory extends Model
 {
-    protected $table = 'user_paybacks';
+    protected $table = 'user_payback_history';
     protected $primaryKey = 'id';
     protected $fillable = [
         'user_id',
         'percentage',
         'on'
     ];
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function user()
     {
         return $this->hasOne('App\Entities\User');
     }
 
-    public function history()
+    public function payback()
     {
-        return $this->hasMany('App\Entities\UserPaybackHistory');
+        return $this->hasOne('App\Entities\User');
     }
 }
