@@ -28,6 +28,7 @@ class PaybackController extends Controller
             [
                 'percentage' => 0,
                 'total' => 0,
+                'goal' => 0,
                 'on' => false
             ]);
         $data = new PaybackResource($payback);

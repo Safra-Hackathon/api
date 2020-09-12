@@ -24,6 +24,7 @@ class UpdateUserPaybackRequest extends FormRequest
     public function rules()
     {
         return [
+            'goal' => 'required',
             'percentage' => 'required',
             'on' => 'required'
         ];

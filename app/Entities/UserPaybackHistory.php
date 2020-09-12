@@ -10,6 +10,7 @@ class UserPaybackHistory extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'user_id',
+        'goal',
         'percentage',
         'on'
     ];

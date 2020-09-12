@@ -17,6 +17,7 @@ class Payback extends JsonResource
         return [
             'percentage' => $this->percentage,
             'total' => $this->total,
+            'goal' => $this->goal,
             'on' => $this->on
         ];
         // return parent::toArray($request);

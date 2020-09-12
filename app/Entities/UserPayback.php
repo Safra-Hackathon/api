@@ -12,6 +12,7 @@ class UserPayback extends Model
         'user_id',
         'percentage',
         'total',
+        'goal',
         'on'
     ];
     public $timestamps = false;

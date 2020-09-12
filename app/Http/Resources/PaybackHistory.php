@@ -18,6 +18,7 @@ class PaybackHistory extends JsonResource
             'date' => $this->created_at,
             'percentage' => $this->percentage,
             'total' => $this->total,
+            'goal' => $this->goal,
             'on' => $this->on
         ];
     }
