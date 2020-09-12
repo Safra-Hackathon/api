@@ -40,6 +40,8 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
     Route::group(['namespace' => 'Payback'], function () {
         Route::get('payback', ['as' => 'payback', 'uses' => 'PaybackController@me']);
         Route::post('payback', ['as' => 'payback', 'uses' => 'PaybackController@update']);
+
+        Route::get('payback/history', ['as' => 'payback', 'uses' => 'PaybackController@history']);
     });
 
     Route::group(['namespace' => 'Auth'], function () {
