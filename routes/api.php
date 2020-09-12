@@ -37,6 +37,11 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
         Route::put('profile/password', ['as' => 'profile', 'uses' => 'ProfileController@updatePassword']);
     });
 
+    Route::group(['namespace' => 'Payback'], function () {
+        Route::get('payback', ['as' => 'payback', 'uses' => 'PaybackController@me']);
+        Route::post('payback', ['as' => 'payback', 'uses' => 'PaybackController@update']);
+    });
+
     Route::group(['namespace' => 'Auth'], function () {
         Route::post('logout', ['as' => 'logout', 'uses' => 'LogoutController@logout']);
     });
@@ -44,4 +49,4 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
 });
 
 
-    
+
