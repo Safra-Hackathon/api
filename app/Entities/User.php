@@ -58,7 +58,7 @@ class User extends Authenticatable implements JWTSubject
         $this->notify(new \App\Notifications\MailResetPasswordNotification($token));
     }
 
-    public function paybacks()
+    public function payback()
     {
         return $this->hasOne('App\Entities\UserPayback');
     }

@@ -21,7 +21,7 @@ class PaybackController extends Controller
     public function me(Request $request)
     {
         $user = Auth::user();
-        $payback = $user->paybacks()->firstOrCreate([
+        $payback = $user->payback()->firstOrCreate([
             'user_id' => $user->id
         ]);
         $data = new PaybackResource($payback);
@@ -41,7 +41,7 @@ class PaybackController extends Controller
     public function update(UpdateUserPaybackRequest $request)
     {
         $user = Auth::user();
-        $payback = $user->paybacks()->first();
+        $payback = $user->payback()->first();
         $payback->update($request->toArray());
         $data = new PaybackResource($payback);
 
