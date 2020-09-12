@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,6 @@ use Illuminate\Http\Request;
 |
 */
 
-
 Route::get('/', function () {
     return [
         'app' => 'Laravel 6 API Boilerplate',
@@ -21,35 +21,25 @@ Route::get('/', function () {
     ];
 });
 
-
 Route::group(['namespace' => 'Auth'], function () {
-
     Route::post('auth/login', ['as' => 'login', 'uses' => 'AuthController@login']);
-
     Route::post('auth/register', ['as' => 'register', 'uses' => 'RegisterController@register']);
-    // Send reset password mail
+    // envia email de reset de senha
     Route::post('auth/recovery', 'ForgotPasswordController@sendPasswordResetLink');
-    // handle reset password form process
+    // executa o processo do formulário de reset de senha
     Route::post('auth/reset', 'ResetPasswordController@callResetPassword');
-
 });
 
 Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
 
     Route::group(['namespace' => 'Profile'], function () {
-
         Route::get('profile', ['as' => 'profile', 'uses' => 'ProfileController@me']);
-
         Route::put('profile', ['as' => 'profile', 'uses' => 'ProfileController@update']);
-
         Route::put('profile/password', ['as' => 'profile', 'uses' => 'ProfileController@updatePassword']);
-
     });
 
     Route::group(['namespace' => 'Auth'], function () {
-
         Route::post('logout', ['as' => 'logout', 'uses' => 'LogoutController@logout']);
-
     });
 
 });
