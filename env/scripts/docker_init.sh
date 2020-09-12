@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker exec api composer run post-root-package-install && \
-php artisan key:generate && \
-php artisan jwt:secret && \
-php artisan migrate:fresh --seed
+docker exec api composer run post-root-package-install
+docker exec api php artisan key:generate
+docker exec api php artisan jwt:secret
+docker exec api php artisan migrate:fresh --seed
