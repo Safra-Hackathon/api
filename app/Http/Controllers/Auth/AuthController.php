@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use JWTAuth;
-use App\User;
+use App\Entities\User;
 use Carbon\Carbon;
 use Illuminate\Hashing\BcryptHasher;
 use App\Http\Resources\User as UserResource;
@@ -15,7 +15,7 @@ class AuthController extends Controller
 {
     /**
      * Login
-     * 
+     *
      * @param LoginRequest $request
      * @return \Illuminate\Http\JsonResponse
      * @throws \Illuminate\Validation\ValidationException
