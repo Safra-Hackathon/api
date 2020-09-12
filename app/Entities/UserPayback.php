@@ -17,7 +17,7 @@ class UserPayback extends Model
 
     public function user()
     {
-        return $this->hasMany('App\Entities\User');
+        return $this->hasOne('App\Entities\User');
     }
 
     public function history()
