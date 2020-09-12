@@ -15,13 +15,29 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name'              => 'Admin User',
             'email'             => 'admin@admin.com',
+            'account_id'        => null,
             'password'          => Hash::make('1234'),
         ]);
 
 
         User::create([
-            'name'              => 'John Doe',
-            'email'             => 'user@user.com',
+            'name'              => 'Susan Wojcicki da Silva',
+            'email'             => 'susan@gmail.com',
+            'account_id'        => '00711234511',
+            'password'          => Hash::make('1234'),
+        ]);
+
+        User::create([
+            'name'              => 'Satya Nadella da Silva',
+            'email'             => 'satya@gmail.com',
+            'account_id'        => '12345678901222',
+            'password'          => Hash::make('1234'),
+        ]);
+
+        User::create([
+            'name'              => 'Mark Zuckerberg da Silva',
+            'email'             => 'mark@gmail.com',
+            'account_id'        => '00711234533',
             'password'          => Hash::make('1234'),
         ]);
 
