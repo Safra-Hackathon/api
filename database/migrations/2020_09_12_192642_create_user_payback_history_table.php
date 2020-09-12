@@ -17,6 +17,7 @@ class CreateUserPaybackHistoryTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->double('percentage')->default(0);
+            $table->double('total')->default(0);
             $table->boolean('on')->default(1);
 
             $table->foreign('user_id')->references('id')->on('users');

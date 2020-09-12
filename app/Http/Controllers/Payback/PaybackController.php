@@ -27,6 +27,7 @@ class PaybackController extends Controller
             ['user_id' => $user->id],
             [
                 'percentage' => 0,
+                'total' => 0,
                 'on' => false
             ]);
         $data = new PaybackResource($payback);
@@ -51,8 +52,8 @@ class PaybackController extends Controller
         $data = new PaybackResource($payback);
 
         return response()->json($data);
-
     }
+
 
     /**
      * Update Profile
@@ -68,7 +69,6 @@ class PaybackController extends Controller
         });
 
         return response()->json($paybackHistory);
-
     }
 
 }

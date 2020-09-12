@@ -11,6 +11,7 @@ class UserPayback extends Model
     protected $fillable = [
         'user_id',
         'percentage',
+        'total',
         'on'
     ];
     public $timestamps = false;
