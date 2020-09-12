@@ -23,9 +23,12 @@ class PaybackController extends Controller
     public function me(Request $request)
     {
         $user = Auth::user();
-        $payback = $user->payback()->firstOrCreate([
-            'user_id' => $user->id
-        ]);
+        $payback = $user->payback()->firstOrCreate(
+            ['user_id' => $user->id],
+            [
+                'percentage' => 0,
+                'on' => false
+            ]);
         $data = new PaybackResource($payback);
 
         return response()->json($data);
