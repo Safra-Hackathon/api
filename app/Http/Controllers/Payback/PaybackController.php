@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Payback;
 
 use App\Entities\UserPaybackHistory;
+use App\Http\Requests\Payback\GeneratePaybackRequest;
+use App\Jobs\GeneratePayback;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -53,6 +55,21 @@ class PaybackController extends Controller
         $data = new PaybackResource($payback);
 
         return response()->json($data);
+    }
+
+    /**
+     * Generate Payback
+     *
+     *
+     * @param GeneratePaybackRequest $request
+     *
+     * @param $accountId
+     * @return void
+     */
+    public function generate(GeneratePaybackRequest $request, $accountId)
+    {
+        // Coloca na fila, para processar de forma assíncrona e não travar o request desnecessariamente
+        GeneratePayback::dispatchNow($request->all(), $accountId);
     }
 
 
