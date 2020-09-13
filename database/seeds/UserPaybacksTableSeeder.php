@@ -21,7 +21,7 @@ class UserPaybacksTableSeeder extends Seeder
             'on' => true
         ]);
 
-        DB::statement("ALTER SEQUENCE user_payback_history_pkey RESTART WITH 10;");
+        DB::statement("ALTER SEQUENCE user_payback_history_id_seq RESTART WITH 10;");
         DB::commit();
     }
 }
