@@ -12,7 +12,7 @@ use App\Http\Resources\Investment as InvestmentResource;
 class InvestmentController extends Controller
 {
      /**
-     * Get Login User
+     * Get User Investments
      *
      *
      * @param Request $request
@@ -34,7 +34,7 @@ class InvestmentController extends Controller
 
 
      /**
-     * Update Profile
+     * Update Investments
      *
      *
      * @param UpdateUserInvestmentRequest $request
