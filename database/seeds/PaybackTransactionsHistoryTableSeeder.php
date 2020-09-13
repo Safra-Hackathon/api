@@ -24,7 +24,7 @@ class PaybackTransactionsHistoryTableSeeder extends Seeder
 
         $payback_total = 0;
         do {
-            $amount = rand(10, 20) * 10;
+            $amount = rand(5, 20) * 100;
             $payback_percentage = 1.5;
             $payback_generated = ($payback_percentage * $amount) / 100;
             $payback_total += $payback_generated;
