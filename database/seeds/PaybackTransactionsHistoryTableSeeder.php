@@ -16,7 +16,9 @@ class PaybackTransactionsHistoryTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         $i = 0;
+        $entries = 200;
         $date = Carbon::now();
+        $date->subDays($entries);
 
         $payback_total = 0;
         do {
@@ -39,8 +41,8 @@ class PaybackTransactionsHistoryTableSeeder extends Seeder
 
             PaybackTransactionsHistory::create($fakeTransaction);
 
-            $date->subDays(1);
+            $date->addDay();
             $i++;
-        } while ($i <= 200);
+        } while ($i <= $entries);
     }
 }
