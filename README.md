@@ -1,62 +1,74 @@
-# laravel-api-boilerplate
+# Safra Payback
 
-This is a boilerplate for writing RESTful API projects using Laravel, a "Starter Kit" you can use to build your API in seconds.
+Esse projeto foi desenvolvido como parte do hackathon do banco safra!
 
-##### Packages:
+Levamos em consideração a forma como estão estruturados os requests do banco, a partir da [documentação da api](https://github.com/banco-safra/technee) que foi disponibilizada para esse hackathon.
+
+##### Boilerplate utilizada:
+
+* [Laravel API Boilerplate](https://github.com/kennethtomagan/laravel-api-boilerplate.git) de kennethtomagan
+
+##### Pacotes Utilizados:
 
 * JWT-Auth - [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth)
 * Laravel-CORS [barryvdh/laravel-cors](http://github.com/barryvdh/laravel-cors)
 
-##### Require:
+##### Requisitos:
+
 * PHP: ^7.2
 
 ## Features
 
-* JWT Authentication
-* Basic Features: Registration, Login, Update Profile & Password
-* JSON API Format response.
-* Unit/Feature Testing (Soon).
-* Frontend Vue.js starter kit ready example (Soon).
+* Autenticação JWT
+* Features Básicas: Registro, Login, Atualização de Perfil & Senha
+* Resposta da API em formato JSON.
 
+## Instalação
 
+#### Clonar o repositório:
+```
+$ git clone https://github.com/Safra-Hackathon/api.git safra-hackathon-api
+```
+#### Instalando Dependências
+ 
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-## Installation
-
-#### Clone the Repo:
-```
-$ git clone https://github.com/kennethtomagan/laravel-api-boilerplate.git
-```
-#### Install Dependencies
+#### Rodando o Projeto com Docker Compose
 
 ```
-$ cd laravel-api-boilerplate.git
-$ composer install
-```
-
-#### Configure the Environment
-Create `.env` file:
-```
-$ cat .env.example > .env
-```
-Run `php artisan key:generate` and `php artisan jwt:secret`
-
-#### Migrate and Seed the Database
-```
-$ php artisan migrate:fresh --seed
+$ cd safra-hackathon-api
+$ docker-compose up -d
 ```
 
+#### Script que faz a Configuração Inicial
+O próximo passo é rodar o script que faz a configuração inicial do ambiente & semeia banco de dados
+```
+$ sh ./env/scripts/docker_init.sh
+```
 
-## Route API Endpoint
-* Postman API Documentation Starter Kit https://documenter.getpostman.com/view/880526/SVtN3BkG?version=latest
+## Rotas da API
+* Collection do Postman: [link](env/postman/collection.json)
 
-| Verb     |                     URI                          |       Controller          |      Notes                                |
-| -------- | -----------------------------------------------  | -----------------------   | ------------------------------------------
-| POST     | `http://localhost:8000/api/auth`              |  AuthController           | to do the login and get your access token
-| POST     | `http://localhost:8000/api/register`          |  RegisterController       | to create a new user into your application
-| POST     | `http://localhost:8000/api/recovery`          |  ForgotPasswordController | to recover your credentials;
-| POST     | `http://localhost:8000/api/reset`             |  ResetPasswordController  | to reset your password after the recovery (setup your mail credentials in `.env` file to avoid error);
-| POST     | `http://localhost:8000/api/logout`            |  LogoutController         | to log out the user by invalidating the passed token;
-| GET      | `http://localhost:8000/api/profile`           |  ProfileController        | to get current user data
-| PUT      | `http://localhost:8000/api/profile`           |  ProfileController        | to update current user data
-| PUT      | `http://localhost:8000/api/profile/password`  |  ProfileController        | to update current user password
+Todas as rotas tem um prefixo "{HOST_URL}/api/"
 
+| Verb     |                     URI                                             |       Controller                      |      Notes                                |
+| -------- | ------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------
+| POST     | `auth`                                    |  AuthController                       | faz o login e gera o token de acesso
+| POST     | `register`                                |  RegisterController                   | cria um novo usuário na aplicação
+| POST     | `recovery`                                |  ForgotPasswordController             | recupera as credenciais
+| POST     | `reset`                                   |  ResetPasswordController              | reseta a senha depois da recuperação
+| POST     | `logout`                                  |  LogoutController                     | faz o logout do usuário, invalidando o token
+| GET      | `profile`                                 |  ProfileController                    | pega os dados do perfil do usuário logado
+| PUT      | `profile`                                 |  ProfileController                    | atualiza os dados do perfil do usuário logado
+| PUT      | `profile/password`                        |  ProfileController                    | atualiza a senha do usuário logado
+| GET      | `payback`                                 |  PaybackController                    | recupera informações do estado atual do payback
+| POST     | `payback`                                 |  PaybackController                    | atualiza informações do payback como porcentagem ou liga/desliga 
+| GET      | `payback/history`                         |  PaybackController                    | recupera o histórico gravado de alterações do estado do payback
+| GET      | `payback/transactions`                    |  PaybackController                    | recupera um histórico de transações do safra pay e quanto geraram de payback
+| POST     | `payback/accounts/{account_id}/generate`  |  PaybackController                    | Recebe notificação de pagamento que gera o payback, o corpo do POST é igual ao conteúdo das transactions da API do Safra
+| GET      | `payback/history/chart/{start}/{end}`     |  PaybackHistoryChartController        | Recupera as informações do histórico de payback, utilizada no gráfico da dashboard
+| GET      | `funds`                                   |  FundController                       | Recupera os fundos de investimento e suas informações
+| GET      | `recommend/{value}`                       |  FundController                       | Busca um fundo recomendado com base num valor disponível
+| GET      | `investments`                             |  InvestmentController                 | Retorna a carteira atual de investimentos do cliente
+| POST     | `investments`                             |  InvestmentController                 | Atualiza a carteira de investimentos do cliente
