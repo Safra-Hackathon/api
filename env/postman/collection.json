@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "5cefcda0-6540-455f-8c43-42a59d6d97ab",
+		"name": "Laravel 6.0 API Boilerplate Copy",
+		"description": "\nPostman API Documentation Starter Kit for Laravel 6 Backend API ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "user sample",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user@sample.app",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/register",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@user.com",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/recovery",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"recovery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@sample.app",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "89410a02da590297887c93f258962c99981629b6a009c1ab60f1e316b3fa552d",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/auth/reset",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/auth/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/profile",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Admin User",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/profile",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "current_password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "new_password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/profile/password",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"profile",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payback",
+			"item": [
+				{
+					"name": "Payback",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/payback",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payback Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goal\": 1000,\n    \"percentage\": 1.5,\n    \"on\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								},
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/payback",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payback Generate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transaction\": {\n        \"accountId\": \"00711234511\",\n        \"transactionId\": \"999911\",\n        \"amount\": {\n            \"amount\": \"250.00\",\n            \"currency\": \"BRL\"\n        },\n        \"creditDebitIndicator\": \"Debit\",\n        \"status\": \"Booked\",\n        \"bookingDateTime\": \"2020-04-05T10:43:07-03:00\",\n        \"valueDateTime\": \"2020-04-05T10:45:22-03:00\",\n        \"transactionInformation\": \"Mensalidade Academia\",\n        \"bankTransactionCode\": {\n            \"code\": \"ReceivedCreditTransfer\",\n            \"subCode\": \"DomesticCreditTransfer\"\n        },\n        \"proprietaryBankTransactionCode\": {\n            \"code\": \"Transfer\",\n            \"issuer\": \"BancoSafra\"\n        },\n        \"balance\": {\n            \"amount\": {\n                \"amount\": \"1230.00\",\n                \"currency\": \"BRL\"\n            },\n            \"creditDebitIndicator\": \"Credit\",\n            \"type\": \"InterimBooked\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								},
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/payback/accounts/00711234511/generate",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback",
+								"accounts",
+								"00711234511",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payback History Chart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/payback/history/chart/2020-04-01/2020-09-18",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback",
+								"history",
+								"chart",
+								"2020-04-01",
+								"2020-09-18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payback History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/payback/history",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payback Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{HOST}}/payback/transactions",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"payback",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Investment",
+			"item": [
+				{
+					"name": "Investments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/investments",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"investments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Investments Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"investments\": [\n        { \"nome\": \"fundo_a\", \"valor\": 1300, \"min\": 500 }, \n        { \"nome\": \"fundo_b\", \"valor\": 2000, \"min\": 1000 },\n        { \"nome\": \"fundo_c\", \"valor\": 1000, \"min\": 300 }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/investments",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"investments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zYWZyYS1wYXliYWNrLm5ldDo4MDgwXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjAwMDEyNDY4LCJleHAiOjE2MDAwMTYwNjgsIm5iZiI6MTYwMDAxMjQ2OCwianRpIjoibUZXSkFhNXRpVkRjWG1pSCIsInN1YiI6MiwicHJ2IjoiZjkzMDdlYjVmMjljNzJhOTBkYmFhZWYwZTI2ZjAyNjJlZGU4NmY1NSJ9.rXIm6eIvcN7vUhhAcgZguQXNQNN2hYZmObzOo615Www",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d248c331-347d-4fb2-966b-53244bc019b9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "eabb0f8b-f2c0-4229-a402-a56b3c7cbf3c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
