@@ -50,6 +50,11 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
         Route::get('payback/history/chart/{start}/{end}', ['as' => 'payback', 'uses' => 'PaybackHistoryChartController@history']);
     });
 
+    Route::group(['namespace' => 'Investment'], function () {
+        Route::get('investments', ['as' => 'investments', 'uses' => 'InvestmentController@me']);
+        Route::post('investments', ['as' => 'investments', 'uses' => 'InvestmentController@update']);
+    });
+
     Route::group(['namespace' => 'Auth'], function () {
         Route::post('logout', ['as' => 'logout', 'uses' => 'LogoutController@logout']);
     });

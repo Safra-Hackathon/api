@@ -6,26 +6,21 @@ jobs:
       - image: cimg/php:7.2.33
     steps:
       - checkout
-      - run: docker-compose --version
-      - run: docker --version
-      - run: sudo dockerd
-      - run: sudo docker-compose up
-      - run: docker --version
 #      - run: env/scripts/docker_init.sh
-#      - run: composer self-update
-#      - restore_cache:
-#          keys:
-#            - composer-v1-{{ checksum "composer.lock" }}
-#            - composer-v1-
-#      - run: composer install
-#      - save_cache:
-#          key: composer-v1-{{ checksum "composer.lock" }}
-#          paths:
-#            - vendor
-#      - persist_to_workspace:
-#          root: ~/repo
-#          paths:
-#            - ./
+      - run: composer self-update
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+            - composer-v1-
+      - run: composer install
+      - save_cache:
+          key: composer-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - ./
 #  test:
 #    <<: *defaults
 #    steps:

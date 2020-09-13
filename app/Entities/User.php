@@ -62,4 +62,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasOne('App\Entities\UserPayback');
     }
+
+    public function investment()
+    {
+        return $this->hasOne('App\Entities\Investments');
+    }
 }
