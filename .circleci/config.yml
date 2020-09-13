@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run: docker-compose --version
       - run: docker --version
-      - run: dockerd
-      - run: docker-compose up
+      - run: sudo dockerd
+      - run: sudo docker-compose up
 #      - run: env/scripts/docker_init.sh
 #      - run: composer self-update
 #      - restore_cache:
