@@ -6,7 +6,7 @@ jobs:
       - image: cimg/php:7.2.33
     steps:
       - checkout
-      - echo $USER
+      - run: echo $USER
 #      - run: sudo apt-get update
 #      - run : sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 #      - run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
