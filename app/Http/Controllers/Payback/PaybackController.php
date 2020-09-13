@@ -99,7 +99,7 @@ class PaybackController extends Controller
     public function transactions()
     {
         $user = Auth::user();
-        $transactions = $user->transactions()->get();
+        $transactions = $user->transactions()->limit(5)->get();
         $transactionsHistory = $transactions->transform(function ($item) {
             return new PaybackTransactionsHistoryResource($item);
         });

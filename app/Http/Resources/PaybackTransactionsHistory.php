@@ -19,7 +19,8 @@ class PaybackTransactionsHistory extends JsonResource
             'amount' => $this->transaction_amount,
             'percentage' => $this->payback_percentage,
             'payback' => $this->payback_generated,
-            'payback_total' => $this->payback_total
+            'payback_total' => $this->payback_total,
+            'data' => $this->date
         ];
     }
 }
