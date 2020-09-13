@@ -5,6 +5,7 @@ use App\Entities\PaybackTransactionsHistory;
 use Faker\Generator as Faker;
 use \Carbon\Carbon;
 use \Illuminate\Support\Facades\DB;
+use \App\Entities\UserPayback;
 
 class PaybackTransactionsHistoryTableSeeder extends Seeder
 {
@@ -50,5 +51,7 @@ class PaybackTransactionsHistoryTableSeeder extends Seeder
 
         DB::statement("ALTER SEQUENCE payback_transactions_history_id_seq RESTART WITH $entries;");
         DB::commit();
+
+        UserPayback::where('user_id', 2)->update(['total' => $payback_total]);
     }
 }
