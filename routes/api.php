@@ -43,6 +43,7 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
 
         Route::post('payback/accounts/{account_id}/generate', ['as' => 'payback', 'uses' => 'PaybackController@generate']);
 
+        Route::get('payback/transactions', ['as' => 'payback', 'uses' => 'PaybackController@transactions']);
         Route::get('payback/history', ['as' => 'payback', 'uses' => 'PaybackController@history']);
     });
 

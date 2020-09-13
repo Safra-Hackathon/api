@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Payback\UpdateUserPaybackRequest;
 use App\Http\Resources\Payback as PaybackResource;
 use App\Http\Resources\PaybackHistory as PaybackHistoryResource;
+use App\Http\Resources\PaybackTransactionsHistory as PaybackTransactionsHistoryResource;
 
 class PaybackController extends Controller
 {
@@ -87,6 +88,23 @@ class PaybackController extends Controller
         });
 
         return response()->json($paybackHistory);
+    }
+
+    /**
+     * Update Profile
+     *
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function transactions()
+    {
+        $user = Auth::user();
+        $transactions = $user->transactions()->get();
+        $transactionsHistory = $transactions->transform(function ($item) {
+            return new PaybackTransactionsHistoryResource($item);
+        });
+
+        return response()->json($transactionsHistory);
     }
 
 }

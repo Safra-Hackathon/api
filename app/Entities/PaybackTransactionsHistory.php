@@ -20,4 +20,9 @@ class PaybackTransactionsHistory extends Model
         'date'
     ];
     public $timestamps = false;
+
+    public function user()
+    {
+        return $this->belongsTo('App\Entities\User');
+    }
 }
