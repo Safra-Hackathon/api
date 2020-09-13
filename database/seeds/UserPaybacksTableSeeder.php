@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Entities\UserPayback;
+use \Illuminate\Support\Facades\DB;
 
 class UserPaybacksTableSeeder extends Seeder
 {
@@ -19,5 +20,8 @@ class UserPaybacksTableSeeder extends Seeder
             'goal' => 1000,
             'on' => true
         ]);
+
+        DB::statement("ALTER SEQUENCE user_payback_history_pkey RESTART WITH 10;");
+        DB::commit();
     }
 }
