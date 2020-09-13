@@ -22,7 +22,7 @@ class PaybackHistoryChartController extends Controller
         $userId = Auth::user()->id;
         $paybackHistory = PaybackTransactionsHistory::select(
                 DB::raw("LEFT(date::TEXT, 7) as year_month"),
-                DB::raw('SUM(payback_generated) as payback')
+                DB::raw('MAX(payback_total) as payback')
             )
             ->where('user_id', $userId)
             ->whereBetween('date', [$start, $end])
@@ -30,7 +30,9 @@ class PaybackHistoryChartController extends Controller
             ->get()
             ->sortBy('year_month')
             ->map(function ($item) {
-                return collect([$item->year_month => $item->payback]);
+                return collect([
+                    $item->year_month => $item->payback
+                ]);
             })
             ->reverse()
             ->toArray();
