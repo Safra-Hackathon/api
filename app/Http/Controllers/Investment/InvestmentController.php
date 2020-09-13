@@ -27,6 +27,7 @@ class InvestmentController extends Controller
         $data = [];
         if ($investment) {
             $data = new InvestmentResource($investment);
+            $investment->available = $user->payback()->first()->total;
         }
 
         return response()->json($data);
@@ -52,6 +53,8 @@ class InvestmentController extends Controller
             ['user_id' => $userId],
             $investments
         );
+        $investment->available = $user->payback()->first()->total;
+
         $data = new InvestmentResource($investment);
 
         return response()->json($data);

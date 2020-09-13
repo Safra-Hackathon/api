@@ -15,6 +15,7 @@ class Investment extends JsonResource
     public function toArray($request)
     {
         return [
+            'available' => $this->available,
             'investments' => $this->investments
         ];
         // return parent::toArray($request);
