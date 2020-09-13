@@ -6,8 +6,8 @@ jobs:
       - image: cimg/php:7.2.33
     steps:
       - checkout
-      - run: docker-compose up -d
-      - run: env/scripts/docker_init.sh
+      - run: sudo docker-compose up -d
+#      - run: env/scripts/docker_init.sh
 #      - run: composer self-update
 #      - restore_cache:
 #          keys:
