@@ -10,6 +10,7 @@ jobs:
       - run: docker --version
       - run: sudo dockerd
       - run: sudo docker-compose up
+
 #      - run: env/scripts/docker_init.sh
 #      - run: composer self-update
 #      - restore_cache:
