@@ -6,17 +6,18 @@ jobs:
       - image: cimg/php:7.2.33
     steps:
       - checkout
-      - run: sudo apt-get update
-      - run : sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-      - run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-      - run: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-      - run: sudo apt-get update
-      - run: sudo apt-get install docker-ce docker-ce-cli containerd.io
-      - run: sudo usermod -aG docker ubuntu
-      - run: su ubuntu
-      - run: sudo curl -L "https://github.com/docker/compose/releases/download/1.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-      - run: sudo chmod +x /usr/local/bin/docker-compose
-      - run: docker-compose --version
+      - echo $USER
+#      - run: sudo apt-get update
+#      - run : sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#      - run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#      - run: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#      - run: sudo apt-get update
+#      - run: sudo apt-get install docker-ce docker-ce-cli containerd.io
+#      - run: sudo usermod -aG docker ubuntu
+#      - run: su ubuntu
+#      - run: sudo curl -L "https://github.com/docker/compose/releases/download/1.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#      - run: sudo chmod +x /usr/local/bin/docker-compose
+#      - run: docker-compose --version
 #      - run: composer self-update
 #      - restore_cache:
 #          keys:
