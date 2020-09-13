@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Entities\PaybackTransactionsHistory;
 use Faker\Generator as Faker;
 use \Carbon\Carbon;
+use \Illuminate\Support\Facades\DB;
 
 class PaybackTransactionsHistoryTableSeeder extends Seeder
 {
@@ -44,5 +45,10 @@ class PaybackTransactionsHistoryTableSeeder extends Seeder
             $date->addDay();
             $i++;
         } while ($i <= $entries);
+
+        $entries += 5;
+
+        DB::statement("ALTER SEQUENCE payback_transactions_history_id_seq RESTART WITH $entries;");
+        DB::commit();
     }
 }
