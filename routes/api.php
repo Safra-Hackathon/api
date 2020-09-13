@@ -46,6 +46,10 @@ Route::group(['middleware' => ['jwt', 'jwt.auth']], function () {
         Route::get('payback/history', ['as' => 'payback', 'uses' => 'PaybackController@history']);
     });
 
+    Route::group(['namespace' => 'Charts'], function () {
+        Route::get('payback/history/chart/{start}/{end}', ['as' => 'payback', 'uses' => 'PaybackHistoryChartController@history']);
+    });
+
     Route::group(['namespace' => 'Auth'], function () {
         Route::post('logout', ['as' => 'logout', 'uses' => 'LogoutController@logout']);
     });
