@@ -70,21 +70,21 @@ class PaybackHistoryChartController extends Controller
                 $last *= $rate;
                 $lastDateStr = substr($lastDate->toISOString(), 0, 10);
                 $data['projetado'][] = [
-                    $lastDateStr => number_format($last, 2)
+                    $lastDateStr => number_format($last, 2, '.', '')
                 ];
 
                 $lastDate->addMonth();
                 $last *= $rate;
                 $lastDateStr = substr($lastDate->toISOString(), 0, 10);
                 $data['projetado'][] = [
-                    $lastDateStr => number_format($last, 2)
+                    $lastDateStr => number_format($last, 2, '.', '')
                 ];
 
                 $lastDate->addMonth();
                 $last *= $rate;
                 $lastDateStr = substr($lastDate->toISOString(), 0, 10);
                 $data['projetado'][] = [
-                    $lastDateStr => number_format($last, 2)
+                    $lastDateStr => number_format($last, 2, '.', '')
                 ];
             }
 
